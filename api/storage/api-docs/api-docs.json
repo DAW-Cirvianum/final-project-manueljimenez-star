@@ -1,0 +1,664 @@
+{
+      "openapi": "3.0.0",
+      "info": {
+            "title": "ELARX API",
+            "description": "Documentación oficial de la API ELARX para gestión de contenidos y reseñas.",
+            "version": "1.0.0"
+      },
+      "paths": {
+            "/api/register": {
+                  "post": {
+                        "tags": [
+                              "Autenticación"
+                        ],
+                        "summary": "Registro de usuario",
+                        "requestBody": {
+                              "required": true,
+                              "content": {
+                                    "application/json": {
+                                          "schema": {
+                                                "required": [
+                                                      "name",
+                                                      "email",
+                                                      "password"
+                                                ],
+                                                "properties": {
+                                                      "name": {
+                                                            "type": "string",
+                                                            "example": "Manuel Jimenez"
+                                                      },
+                                                      "email": {
+                                                            "type": "string",
+                                                            "example": "manuel@test.com"
+                                                      },
+                                                      "password": {
+                                                            "type": "string",
+                                                            "format": "password",
+                                                            "example": "password123"
+                                                      }
+                                                }
+                                          }
+                                    }
+                              }
+                        },
+                        "responses": {
+                              "201": {
+                                    "description": "Usuario creado y token emitido"
+                              }
+                        }
+                  }
+            },
+            "/api/login": {
+                  "post": {
+                        "tags": [
+                              "Autenticación"
+                        ],
+                        "summary": "Iniciar sesión (Email o Username)",
+                        "requestBody": {
+                              "required": true,
+                              "content": {
+                                    "application/json": {
+                                          "schema": {
+                                                "required": [
+                                                      "login",
+                                                      "password"
+                                                ],
+                                                "properties": {
+                                                      "login": {
+                                                            "type": "string",
+                                                            "description": "Email o nombre de usuario",
+                                                            "example": "manuel@test.com"
+                                                      },
+                                                      "password": {
+                                                            "type": "string",
+                                                            "format": "password",
+                                                            "example": "password123"
+                                                      }
+                                                }
+                                          }
+                                    }
+                              }
+                        },
+                        "responses": {
+                              "200": {
+                                    "description": "Token devuelto correctamente"
+                              },
+                              "401": {
+                                    "description": "Credenciales inválidas"
+                              }
+                        }
+                  }
+            },
+            "/api/contents": {
+                  "get": {
+                        "tags": [
+                              "Contenidos"
+                        ],
+                        "summary": "Listar y filtrar contenidos",
+                        "parameters": [
+                              {
+                                    "name": "search",
+                                    "in": "query",
+                                    "schema": {
+                                          "type": "string"
+                                    },
+                                    "description": "Buscar por título"
+                              },
+                              {
+                                    "name": "type",
+                                    "in": "query",
+                                    "schema": {
+                                          "type": "string",
+                                          "enum": [
+                                                "movie",
+                                                "series",
+                                                "game"
+                                          ]
+                                    }
+                              },
+                              {
+                                    "name": "genre_id",
+                                    "in": "query",
+                                    "schema": {
+                                          "type": "integer"
+                                    }
+                              },
+                              {
+                                    "name": "sort",
+                                    "in": "query",
+                                    "schema": {
+                                          "type": "string",
+                                          "enum": [
+                                                "recent",
+                                                "top"
+                                          ]
+                                    }
+                              }
+                        ],
+                        "responses": {
+                              "200": {
+                                    "description": "Lista paginada de contenidos"
+                              }
+                        }
+                  },
+                  "post": {
+                        "tags": [
+                              "Contenidos"
+                        ],
+                        "summary": "Crear nuevo contenido (Admin)",
+                        "security": [
+                              {
+                                    "bearerAuth": []
+                              }
+                        ],
+                        "requestBody": {
+                              "content": {
+                                    "multipart/form-data": {
+                                          "schema": {
+                                                "type": "object",
+                                                "required": [
+                                                      "title",
+                                                      "description",
+                                                      "type",
+                                                      "genres",
+                                                      "platforms"
+                                                ],
+                                                "properties": {
+                                                      "title": {
+                                                            "type": "string"
+                                                      },
+                                                      "description": {
+                                                            "type": "string"
+                                                      },
+                                                      "type": {
+                                                            "type": "string",
+                                                            "enum": [
+                                                                  "movie",
+                                                                  "series",
+                                                                  "game"
+                                                            ]
+                                                      },
+                                                      "genres": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                  "type": "integer"
+                                                            },
+                                                            "description": "IDs de géneros"
+                                                      },
+                                                      "platforms": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                  "type": "integer"
+                                                            },
+                                                            "description": "IDs de plataformas"
+                                                      },
+                                                      "banner_image": {
+                                                            "type": "string",
+                                                            "format": "binary"
+                                                      },
+                                                      "cover_image": {
+                                                            "type": "string",
+                                                            "format": "binary"
+                                                      }
+                                                }
+                                          }
+                                    }
+                              }
+                        },
+                        "responses": {
+                              "201": {
+                                    "description": "Contenido creado"
+                              }
+                        }
+                  }
+            },
+            "/api/reviews": {
+                  "post": {
+                        "tags": [
+                              "Reseñas"
+                        ],
+                        "summary": "Publicar una nueva reseña",
+                        "security": [
+                              {
+                                    "bearerAuth": []
+                              }
+                        ],
+                        "requestBody": {
+                              "required": true,
+                              "content": {
+                                    "application/json": {
+                                          "schema": {
+                                                "required": [
+                                                      "content_id",
+                                                      "comment",
+                                                      "rating"
+                                                ],
+                                                "properties": {
+                                                      "content_id": {
+                                                            "type": "integer",
+                                                            "example": 1
+                                                      },
+                                                      "comment": {
+                                                            "type": "string",
+                                                            "minLength": 10,
+                                                            "example": "Me ha parecido una obra maestra."
+                                                      },
+                                                      "rating": {
+                                                            "type": "integer",
+                                                            "minimum": 1,
+                                                            "maximum": 5,
+                                                            "example": 5
+                                                      }
+                                                }
+                                          }
+                                    }
+                              }
+                        },
+                        "responses": {
+                              "201": {
+                                    "description": "Reseña creada y media del contenido actualizada"
+                              }
+                        }
+                  }
+            },
+            "/api/contents/{contentId}/reviews": {
+                  "get": {
+                        "tags": [
+                              "Reseñas"
+                        ],
+                        "summary": "Listar reseñas de un contenido específico",
+                        "parameters": [
+                              {
+                                    "name": "contentId",
+                                    "in": "path",
+                                    "required": true,
+                                    "schema": {
+                                          "type": "integer"
+                                    }
+                              }
+                        ],
+                        "responses": {
+                              "200": {
+                                    "description": "Lista de reseñas con datos del usuario"
+                              }
+                        }
+                  }
+            },
+            "/api/genres": {
+                  "get": {
+                        "tags": [
+                              "Maestros"
+                        ],
+                        "summary": "Listar todos los géneros",
+                        "responses": {
+                              "200": {
+                                    "description": "Lista de géneros"
+                              }
+                        }
+                  },
+                  "post": {
+                        "tags": [
+                              "Maestros (Admin)"
+                        ],
+                        "summary": "Crear nuevo género",
+                        "security": [
+                              {
+                                    "bearerAuth": []
+                              }
+                        ],
+                        "requestBody": {
+                              "content": {
+                                    "application/json": {
+                                          "schema": {
+                                                "required": [
+                                                      "name"
+                                                ],
+                                                "properties": {
+                                                      "name": {
+                                                            "type": "string",
+                                                            "example": "Acción"
+                                                      }
+                                                }
+                                          }
+                                    }
+                              }
+                        },
+                        "responses": {
+                              "201": {
+                                    "description": "Género creado"
+                              }
+                        }
+                  }
+            },
+            "/api/platforms": {
+                  "get": {
+                        "tags": [
+                              "Maestros"
+                        ],
+                        "summary": "Listar todas las plataformas",
+                        "responses": {
+                              "200": {
+                                    "description": "Lista de plataformas"
+                              }
+                        }
+                  },
+                  "post": {
+                        "tags": [
+                              "Maestros (Admin)"
+                        ],
+                        "summary": "Crear nueva plataforma",
+                        "security": [
+                              {
+                                    "bearerAuth": []
+                              }
+                        ],
+                        "requestBody": {
+                              "content": {
+                                    "application/json": {
+                                          "schema": {
+                                                "required": [
+                                                      "name"
+                                                ],
+                                                "properties": {
+                                                      "name": {
+                                                            "type": "string",
+                                                            "example": "PlayStation 5"
+                                                      }
+                                                }
+                                          }
+                                    }
+                              }
+                        },
+                        "responses": {
+                              "201": {
+                                    "description": "Plataforma creada"
+                              }
+                        }
+                  }
+            },
+            "/api/profile": {
+                  "get": {
+                        "tags": [
+                              "Usuario"
+                        ],
+                        "summary": "Obtener mi perfil",
+                        "security": [
+                              {
+                                    "bearerAuth": []
+                              }
+                        ],
+                        "responses": {
+                              "200": {
+                                    "description": "Datos del usuario y estadísticas"
+                              }
+                        }
+                  },
+                  "post": {
+                        "tags": [
+                              "Usuario"
+                        ],
+                        "summary": "Actualizar mi perfil (incluye avatar)",
+                        "security": [
+                              {
+                                    "bearerAuth": []
+                              }
+                        ],
+                        "requestBody": {
+                              "content": {
+                                    "multipart/form-data": {
+                                          "schema": {
+                                                "type": "object",
+                                                "properties": {
+                                                      "name": {
+                                                            "type": "string"
+                                                      },
+                                                      "bio": {
+                                                            "type": "string"
+                                                      },
+                                                      "avatar": {
+                                                            "type": "string",
+                                                            "format": "binary"
+                                                      }
+                                                }
+                                          }
+                                    }
+                              }
+                        },
+                        "responses": {
+                              "200": {
+                                    "description": "Perfil actualizado"
+                              }
+                        }
+                  }
+            },
+            "/api/admin/stats": {
+                  "get": {
+                        "tags": [
+                              "Admin"
+                        ],
+                        "summary": "Estadísticas globales del sistema",
+                        "security": [
+                              {
+                                    "bearerAuth": []
+                              }
+                        ],
+                        "responses": {
+                              "200": {
+                                    "description": "Conteos de usuarios, contenidos y reseñas"
+                              }
+                        }
+                  }
+            },
+            "Content": {
+                  "type": "object",
+                  "properties": {
+                        "id": {
+                              "type": "integer",
+                              "example": 1
+                        },
+                        "title": {
+                              "type": "string",
+                              "example": "Inception"
+                        },
+                        "description": {
+                              "type": "string",
+                              "example": "Un ladrón que roba secretos..."
+                        },
+                        "type": {
+                              "type": "string",
+                              "enum": [
+                                    "movie",
+                                    "series",
+                                    "game"
+                              ]
+                        },
+                        "release_year": {
+                              "type": "integer",
+                              "example": 2010
+                        },
+                        "rating_avg": {
+                              "type": "number",
+                              "format": "float",
+                              "example": 4.85
+                        },
+                        "banner_image": {
+                              "type": "string",
+                              "format": "uri",
+                              "nullable": true
+                        },
+                        "cover_image": {
+                              "type": "string",
+                              "format": "uri"
+                        },
+                        "genres": {
+                              "type": "array",
+                              "items": {
+                                    "$ref": "#/components/schemas/Genre"
+                              }
+                        },
+                        "platforms": {
+                              "type": "array",
+                              "items": {
+                                    "$ref": "#/components/schemas/Platform"
+                              }
+                        }
+                  }
+            },
+            "Review": {
+                  "type": "object",
+                  "properties": {
+                        "id": {
+                              "type": "integer",
+                              "example": 10
+                        },
+                        "comment": {
+                              "type": "string",
+                              "example": "Una dirección de arte impecable."
+                        },
+                        "rating": {
+                              "type": "integer",
+                              "minimum": 1,
+                              "maximum": 5,
+                              "example": 4
+                        },
+                        "user": {
+                              "$ref": "#/components/schemas/User"
+                        },
+                        "likes_count": {
+                              "type": "integer",
+                              "example": 15
+                        }
+                  }
+            },
+            "Rating": {
+                  "type": "object",
+                  "properties": {
+                        "score": {
+                              "type": "integer",
+                              "example": 5
+                        },
+                        "user_id": {
+                              "type": "integer"
+                        },
+                        "content_id": {
+                              "type": "integer"
+                        }
+                  }
+            },
+            "Platform": {
+                  "type": "object",
+                  "properties": {
+                        "id": {
+                              "type": "integer",
+                              "example": 1
+                        },
+                        "name": {
+                              "type": "string",
+                              "example": "PlayStation 5"
+                        }
+                  }
+            },
+            "Genre": {
+                  "type": "object",
+                  "properties": {
+                        "id": {
+                              "type": "integer",
+                              "example": 1
+                        },
+                        "name": {
+                              "type": "string",
+                              "example": "Ciencia Ficción"
+                        }
+                  }
+            }
+      },
+      "components": {
+            "schemas": {
+                  "User": {
+                        "type": "object",
+                        "properties": {
+                              "id": {
+                                    "type": "integer",
+                                    "example": 1
+                              },
+                              "name": {
+                                    "type": "string",
+                                    "example": "Manuel Jimenez"
+                              },
+                              "username": {
+                                    "type": "string",
+                                    "example": "manueljimenez"
+                              },
+                              "email": {
+                                    "type": "string",
+                                    "example": "manuel@test.com"
+                              },
+                              "role": {
+                                    "type": "string",
+                                    "enum": [
+                                          "user",
+                                          "admin"
+                                    ],
+                                    "example": "user"
+                              },
+                              "reputation_score": {
+                                    "type": "integer",
+                                    "example": 150
+                              },
+                              "avatar": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "example": "https://tuapi.com/storage/avatars/1.jpg"
+                              },
+                              "bio": {
+                                    "type": "string",
+                                    "nullable": true,
+                                    "example": "Entusiasta del cine y los videojuegos."
+                              }
+                        }
+                  }
+            },
+            "Review": {
+                  "type": "object",
+                  "properties": {
+                        "id": {
+                              "type": "integer"
+                        },
+                        "comment": {
+                              "type": "string"
+                        },
+                        "rating": {
+                              "type": "integer",
+                              "description": "Nota del 1 al 5"
+                        },
+                        "created_at": {
+                              "type": "string",
+                              "format": "date-time"
+                        }
+                  }
+            },
+            "Content": {
+                  "type": "object",
+                  "properties": {
+                        "id": {
+                              "type": "integer"
+                        },
+                        "title": {
+                              "type": "string"
+                        },
+                        "type": {
+                              "type": "string",
+                              "enum": [
+                                    "game",
+                                    "series",
+                                    "movie"
+                              ]
+                        },
+                        "rating_avg": {
+                              "type": "number",
+                              "format": "float"
+                        }
+                  }
+            }
+      }
+}

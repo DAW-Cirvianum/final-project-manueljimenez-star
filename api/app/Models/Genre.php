@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Genre extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['
+    name'
+];
+
+    /**
+     * Relación Muchos a Muchos: Los contenidos disponibles en esta plataforma.
+     * Utiliza la tabla pivote 'content_genre'.
+     */
+    public function contents()
+    {
+        return $this->belongsToMany(Content::class, 'content_genre');
+    }
+}

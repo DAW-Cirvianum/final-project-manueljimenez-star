@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colores ELARX - Profundidad OLED */
+  --color-elarx-black: #050505;
+  --color-elarx-dark: #0B0B0D;
+  --color-elarx-card: #111111;
+  --color-elarx-gold: #D4AF37;
+  --color-elarx-text-primary: #F5F5F5;
+
+  /* Radios Premium */
+  --radius-elarx: 2.5rem;
+
+  /* Sombras y Efectos */
+  --shadow-gold-glow: 0 0 20px rgba(212, 175, 55, 0.1);
+
+  /* Tiempos de transición Cinematográficos */
+  --duration-luxury: 500ms;
+  --ease-cinematic: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @keyframes shimmer {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  --animate-shimmer: shimmer 2s infinite;
+}
+
+@layer base {
+  body {
+    @apply bg-elarx-black text-elarx-text-primary antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01";
+  }
+
+  /* Estilo para títulos ELARX */
+  h1,
+  h2,
+  h3 {
+    @apply font-black italic uppercase tracking-tighter;
+  }
+}
+
+.elarx-glass {
+  @apply bg-white/[0.02] border border-white/5 backdrop-blur-xl;
+}

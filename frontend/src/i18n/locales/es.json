@@ -1,0 +1,340 @@
+{
+      "nav": {
+            "catalog": "Colección",
+            "search_placeholder": "Buscar en Elarx...",
+            "profile": "Mi Perfil",
+            "admin": "Dashboard",
+            "dashboard": "Terminal"
+      },
+      "common": {
+            "search": "Buscar en Elarx...",
+            "rating": "Calificación",
+            "year": "Año",
+            "page": "Sector",
+            "loading": "Cargando...",
+            "loading_session": "Verificando credenciales...",
+            "access_denied": "Acceso denegado. Redireccionando...",
+            "back": "Regresar a la Terminal",
+            "login": "Inicio Seguro",
+            "scroll_left": "Navegar Atrás",
+            "scroll_right": "Explorar Más",
+            "upload_image": "Subir Imagen",
+            "delete": "Eliminar",
+            "cancel": "Cancelar",
+            "roles": {
+                  "user": "Usuario",
+                  "admin": "Administrador"
+            },
+            "errors": {
+                  "fetch_failed": "El radar está fuera de línea. Revisa tu conexión.",
+                  "scroll_failed": "Error de navegación en la interfaz. Por favor reinicia."
+            }
+      },
+      "home": {
+            "featured_movies": "Joyas Cinematográficas",
+            "trending_series": "Series Tendencia",
+            "games": "Bóveda de Juegos",
+            "recently_added": "Recién Desplegado",
+            "hero": {
+                  "play_button": "Vivir la Experiencia",
+                  "info": "Ficha Técnica",
+                  "badge": "Top Rated",
+                  "details": "Detalles",
+                  "premium": "Producción Original"
+            }
+      },
+      "search": {
+            "placeholder": "Iniciar escaneo de títulos...",
+            "suggestions_title": "Sugerencias",
+            "no_results": "Sin coincidencias en el radar Elarx para",
+            "loading": "Sincronizando con Elarx...",
+            "min_chars": "Ingresa al menos 3 caracteres",
+            "esc_hint": "ESC para cerrar",
+            "error_sync": "Fallo de enlace: Catálogo Elarx inalcanzable"
+      },
+      "auth": {
+            "login_action": "Acceder",
+            "register_action": "Unirse a Elarx",
+            "logout": "Cerrar Sesión"
+      },
+      "login": {
+            "title": "Inicio de Sesión",
+            "welcome_back": "Verifica tus credenciales para inicializar sesión.",
+            "identifier_label": "Identidad del Usuario",
+            "identifier_placeholder": "Email o Username",
+            "password_label": "Clave de Acceso",
+            "button": "Establecer Conexión",
+            "success": "Conexión establecida. Bienvenido, Usuario.",
+            "error": "Credenciales inválidas. Acceso denegado."
+      },
+      "register": {
+            "title": "Únete a la Élite",
+            "subtitle": "Crea tu identificación ELARX",
+            "labels": {
+                  "name": "Nombre Completo",
+                  "username": "Username (Único)",
+                  "email": "Email Seguro",
+                  "password": "Clave de Acceso"
+            },
+            "submit_button": "Registrar Cuenta",
+            "already_have_account": "¿Ya estás registrado?",
+            "login_link": "Terminal de Acceso"
+      },
+      "forgot": {
+            "title": "Recuperación de Contraseñas",
+            "description": "¿Perdiste el acceso? Proporciona tu email registrado para recibir un enlace de recuperación seguro.",
+            "label": "Email Registrado",
+            "placeholder": "Usuario@elarx.com",
+            "button": "Enviar Enlace de Recuperación",
+            "error_required": "Se requiere un email válido para proceder.",
+            "help_text": "¿Problemas con el bypass biométrico?",
+            "support_link": "Contactar Soporte HQ ELARX"
+      },
+      "reset": {
+            "title": "Recuperación de Contraseñas",
+            "description": "Establece una nueva contraseña de alta seguridad para tu cuenta.",
+            "new_pass": "Nueva Clave de Acceso",
+            "confirm_pass": "Verificar Clave de Acceso",
+            "button": "Actualizar Contraseñas",
+            "success_title": "Acceso Restaurado",
+            "success_sub": "Tus Contraseñas han sido actualizadas. Redireccionando al inicio seguro..."
+      },
+      "profile": {
+            "no_bio": "Este usuario prefiere mantener el misterio. Sin bio disponible.",
+            "joined": "En la red desde",
+            "confirm_delete_title": "¿Eliminar Reseña?",
+            "confirm_delete_sub": "Esta acción borrará permanentemente tu opinión de Elarx.",
+            "labels": {
+                  "name": "Nombre Completo",
+                  "username": "Username",
+                  "bio": "Biografía"
+            },
+            "placeholders": {
+                  "bio": "Cuéntale al mundo tus gustos..."
+            },
+            "stats": {
+                  "reviews": "Reseñas",
+                  "favorites": "Favoritos",
+                  "level": "Reputación"
+            },
+            "tabs": {
+                  "favorites": "Favoritos",
+                  "reviews": "Actividad"
+            },
+            "empty": {
+                  "favorites": "Tu Favoritos está vacía. Empieza a coleccionar contenido de élite.",
+                  "reviews": "Aún no has compartido tus Reseñas sobre ningún contenido."
+            }
+      },
+      "detail": {
+            "add_list": "Agregar a mi Favoritos",
+            "in_list": "En tu Favoritos",
+            "community_rating": "Puntaje de Miembros Elarx",
+            "release": "Fecha de Lanzamiento",
+            "duration": "Duración / Tiempo de Juego",
+            "synopsis": "Descripcion / Sinopsis",
+            "reviews_title": "Reseñas de Campo",
+            "publish": "Publicar Reseña",
+            "placeholder": "Escribe tu reporte aquí (mín. 10 caracteres)...",
+            "send_review": "Transmitir Reseña",
+            "review_success": "Reseña archivado con éxito",
+            "delete_review_confirm": "¿Seguro que quieres eliminar esta Reseña?",
+            "review_deleted": "Reseña purgada",
+            "no_reviews_yet": "No hay Reseñas de campo disponibles. Sé el primero."
+      },
+      "catalog": {
+            "explorer_subtitle": "Busca a través de los archivos",
+            "title_1": "Registro",
+            "title_2": "Global",
+            "search_placeholder": "Identificar objetivo (Nombre, Director, Estudio...)",
+            "type_all": "Todas las Entidades",
+            "type_movie": "Películas",
+            "type_series": "Series",
+            "type_games": "Juegos",
+            "genre_all": "Todos los Géneros",
+            "platform_all": "Plataformas",
+            "sort_label": "Ordenar por",
+            "sort_recent": "Recientes",
+            "sort_top": "Calificación",
+            "results_found": "resultados encontrados",
+            "no_results": "No se encontraron registros que coincidan con la búsqueda."
+      },
+      "admin": {
+            "title": "Supervisión del Sistema",
+            "management": "Gestión Central",
+            "system": "Sistema Activo",
+            "verifying": "Autenticando Administrador...",
+            "access_denied_title": "Acceso No Autorizado",
+            "access_denied_sub": "No tienes privilegios administrativos.",
+            "creation_mode": "Modo Creación",
+            "new_additions": "Últimos Despliegues",
+            "tabs": {
+                  "dashboard": "Estadisticas",
+                  "content": "Contenidos",
+                  "users": "Usuarios",
+                  "settings": "Generos / Plataformas"
+            },
+            "stats": {
+                  "total_users": "Usuarios Activos",
+                  "content_count": "Registros en Base de Datos",
+                  "active_reviews": "Inteligencia de Red",
+                  "genres": "Clasificaciones",
+                  "recent_users": "Nuevas Identidades",
+                  "latest_content": "Último Contenido"
+            }
+      },
+      "user_manager": {
+            "header": {
+                  "title": "Inteligencia Central",
+                  "subtitle": "Gestión y supervisión de unidades activas ELARX",
+                  "search_placeholder": "Buscar por identidad o email..."
+            },
+            "table": {
+                  "identity": "Operativo",
+                  "reputation": "Puntaje de Red",
+                  "role": "Nivel de Acceso",
+                  "status": "Estado de Señal",
+                  "control": "Operaciones",
+                  "active": "Activo",
+                  "banned": "Neutralizado"
+            },
+            "confirm": {
+                  "ban_title": "¿Neutralizar Operativo?",
+                  "unban_title": "¿Restaurar Acceso de Operativo?",
+                  "sub": "Confirmando acción para: {{name}}"
+            }
+      },
+      "content_manager": {
+            "library": {
+                  "title": "Base de Datos Principal",
+                  "filter_placeholder": "Filtrar registros..."
+            },
+            "sections": {
+                  "identity": "Datos Núcleo",
+                  "media": "Activos Visuales"
+            },
+            "stats": {
+                  "total": "Total Registros",
+                  "page": "Página"
+            },
+            "form": {
+                  "title_new": "Desplegar Nuevo Registro",
+                  "title_edit": "Modificar Registro Activo",
+                  "label_description": "Sinopsis / Descripcion",
+                  "label_release": "Año de Lanzamiento",
+                  "label_duration": "Tiempo de Ejecución",
+                  "label_format": "Formato de Categoría",
+                  "formats": {
+                        "movie": "Pelicula",
+                        "series": "Serie",
+                        "game": "Juego"
+                  },
+                  "btn_publish": "Publicar Contenido",
+                  "btn_update": "Confirmar Modificación"
+            },
+            "confirm_delete_title": "¿Borrar registro de la red?",
+            "confirm_delete_warning": "Esta acción es permanente y eliminará todos los metadatos asociados."
+      },
+      "settings": {
+            "common": {
+                  "empty_list": "No hay registros en la base de datos",
+                  "error_loading": "Fallo al sincronizar datos de configuración",
+                  "adding": "Escribiendo en la base de datos...",
+                  "deleting": "Borrando registro...",
+                  "error_duplicate": "La identidad ya existe en la red",
+                  "error_process": "Operación fallida: Rechazo del sistema",
+                  "error_linked_data": "No se puede borrar: Los datos están vinculados a contenido activo",
+                  "confirm_delete_title": "¿Borrar Registro?",
+                  "confirm_delete_sub": "Borrado permanente de: {{name}}"
+            },
+            "genres": {
+                  "title": "Clasificaciones de Género",
+                  "placeholder": "Nueva clasificación..."
+            },
+            "platforms": {
+                  "title": "Plataformas de Despliegue",
+                  "placeholder": "Nueva plataforma..."
+            }
+      },
+      "toasts": {
+            "confirm": {
+                  "title": "¿Estás seguro?",
+                  "subtitle": "Esta acción no se puede deshacer",
+                  "action_confirm": "Confirmar Acción",
+                  "action_cancel": "Cancelar"
+            },
+            "status": {
+                  "loading": "Procesando solicitud...",
+                  "success": "Operación exitosa",
+                  "error": "Ha ocurrido un error"
+            }
+      },
+      "fields": {
+            "title": "Título del Registro",
+            "banner_image": "Imagen de Banner (Wallpaper)",
+            "cover_image": "Imagen de Portada (Poster)",
+            "genres": "Géneros Seleccionados",
+            "platforms": "Plataformas Disponibles"
+      },
+      "content": {
+            "common": {
+                  "items": "títulos disponibles"
+            }
+      },
+      "notifications": {
+            "loading": "Sincronizando perfil...",
+            "processing": "Procesando solicitud...",
+            "updating_role": "Actualizando nivel de acceso...",
+            "uploading_image": "Optimizando avatar...",
+            "deleting": "Ejecutando protocolo de eliminación...",
+            "success": {
+                  "logout": "Enlace cerrado. Nos vemos en el próximo ciclo.",
+                  "profile_updated": "Perfil sincronizado con éxito",
+                  "avatar_updated": "Identidad visual actualizada",
+                  "review_deleted": "Reporte purgado del historial",
+                  "liked": "Interacción de élite registrada",
+                  "password_changed": "Contraseña actualizada correctamente.",
+                  "save": "Cuenta inicializada con éxito.",
+                  "reset_email": "Envío de recuperación despachado. Revisa tu bandeja segura.",
+                  "verified_ready": "Identidad verificada. Puedes proceder.",
+                  "banned": "Acceso del operativo terminado.",
+                  "unbanned": "Acceso del operativo restaurado.",
+                  "role_updated": "Nivel de acceso actualizado con éxito.",
+                  "saved": "Nuevo registro asegurado en la base de datos",
+                  "updated": "Registro actualizado correctamente",
+                  "deleted": "Registro purgado del sistema"
+            },
+            "error": {
+                  "fetch_failed": "Fallo al sincronizar con el catálogo",
+                  "search_failed": "Búsqueda temporalmente no disponible",
+                  "fetch": "Fallo al conectar con el servidor de perfiles",
+                  "required": "El nombre y el usuario son obligatorios",
+                  "profile_failed": "Error al actualizar metadatos",
+                  "image_too_large": "Imagen demasiado pesada (Máx 2MB)",
+                  "avatar_failed": "Fallo en la carga a la nube",
+                  "generic": "Interferencia del sistema detectada. Reintenta.",
+                  "load_content": "Fallo al sincronizar datos de contenido.",
+                  "login_required": "Acceso denegado. Inicia sesión primero.",
+                  "review_too_short": "El reporte es muy breve. Sé más descriptivo.",
+                  "mismatch": "Las Contraseñas no coinciden.",
+                  "invalid_link": "Enlace de recuperación expirado o inválido.",
+                  "validation": "Fallo en el control de seguridad: Datos inválidos",
+                  "email_not_found": "Identidad no encontrada en nuestros registros.",
+                  "load_options": "Fallo al sincronizar taxonomías",
+                  "server": "Error de enlace: Base de datos inalcanzable",
+                  "validation_summary": "Resumen de validación"
+            },
+            "info": {
+                  "already_verified": "Identidad ya confirmada en la red.",
+                  "verify_email": "Cuenta bloqueada. Verifica tu email primero."
+            }
+      },
+      "footer": {
+            "rights": "Todos los derechos administrativos reservados.",
+            "privacy": "Protocolo de Privacidad",
+            "terms": "Términos de Acceso",
+            "cookies": "Huella Digital",
+            "support": "Soporte Técnico HQ",
+            "tagline": "El Arte de lo Visual de Alta Gama"
+      }
+}

@@ -1,0 +1,341 @@
+{
+      "nav": {
+            "catalog": "Collection",
+            "search_placeholder": "Search Elarx...",
+            "profile": "My Profile",
+            "admin": "Dashboard",
+            "dashboard": "Terminal"
+      },
+      "common": {
+            "search": "Search Elarx...",
+            "rating": "Rating",
+            "year": "Year",
+            "page": "Sector",
+            "loading": "Loading...",
+            "loading_session": "Verifying credentials...",
+            "access_denied": "Access denied. Redirecting...",
+            "back": "Return to Terminal",
+            "login": "Secure Login",
+            "scroll_left": "Navigate Back",
+            "scroll_right": "Explore More",
+            "upload_image": "Upload Image",
+            "delete": "Delete",
+            "cancel": "Cancel",
+            "roles": {
+                  "user": "User",
+                  "admin": "Administrator"
+            },
+            "errors": {
+                  "fetch_failed": "Radar is offline. Check your connection.",
+                  "scroll_failed": "Interface navigation error. Please restart."
+            }
+      },
+      "home": {
+            "featured_movies": "Cinematic Gems",
+            "trending_series": "Trending Series",
+            "games": "Gaming Vault",
+            "recently_added": "Recently Deployed",
+            "hero": {
+                  "play": "Watch Now",
+                  "info": "Technical Specs",
+                  "badge": "Top Rated",
+                  "play_button": "Experience Now",
+                  "details": "Details",
+                  "premium": "Original Production"
+            }
+      },
+      "search": {
+            "placeholder": "Initialize title scan...",
+            "suggestions_title": "Suggestions",
+            "no_results": "No matches on Elarx radar for",
+            "loading": "Syncing with Elarx...",
+            "min_chars": "Enter at least 3 characters",
+            "esc_hint": "ESC to close",
+            "error_sync": "Link failure: Elarx Catalog unreachable"
+      },
+      "auth": {
+            "login_action": "Access",
+            "register_action": "Join Elarx",
+            "logout": "End Session"
+      },
+      "login": {
+            "title": "Login",
+            "welcome_back": "Verify your credentials to initialize session.",
+            "identifier_label": "User Identity",
+            "identifier_placeholder": "Email or Username",
+            "password_label": "Access Key",
+            "button": "Establish Connection",
+            "success": "Connection established. Welcome, User.",
+            "error": "Invalid credentials. Access denied."
+      },
+      "register": {
+            "title": "Join the Elite",
+            "subtitle": "Create your ELARX identification",
+            "labels": {
+                  "name": "Full Name",
+                  "username": "Username (Unique)",
+                  "email": "Secure Email",
+                  "password": "Access Key"
+            },
+            "submit_button": "Register Account",
+            "already_have_account": "Already registered?",
+            "login_link": "Access Terminal"
+      },
+      "forgot": {
+            "title": "Password Recovery",
+            "description": "Lost access? Provide your registered email to receive a secure recovery link.",
+            "label": "Registered Email",
+            "placeholder": "User@elarx.com",
+            "button": "Send Recovery Link",
+            "error_required": "A valid email is required to proceed.",
+            "help_text": "Problems with biometric bypass?",
+            "support_link": "Contact ELARX HQ Support"
+      },
+      "reset": {
+            "title": "Password Recovery",
+            "description": "Establish a new high-security password for your account.",
+            "new_pass": "New Access Key",
+            "confirm_pass": "Verify Access Key",
+            "button": "Update Passwords",
+            "success_title": "Access Restored",
+            "success_sub": "Your passwords have been updated. Redirecting to secure login..."
+      },
+      "profile": {
+            "no_bio": "This user prefers to remain a mystery. No bio available.",
+            "joined": "On the network since",
+            "confirm_delete_title": "Delete Review?",
+            "confirm_delete_sub": "This action will permanently erase your opinion from Elarx.",
+            "labels": {
+                  "name": "Full Name",
+                  "username": "Username",
+                  "bio": "Biography"
+            },
+            "placeholders": {
+                  "bio": "Tell the world about your tastes..."
+            },
+            "stats": {
+                  "reviews": "Reviews",
+                  "favorites": "Favorites",
+                  "level": "Reputation"
+            },
+            "tabs": {
+                  "favorites": "Favorites",
+                  "reviews": "Activity"
+            },
+            "empty": {
+                  "favorites": "Your Favorites list is empty. Start collecting elite content.",
+                  "reviews": "You haven't shared any reviews on content yet."
+            }
+      },
+      "detail": {
+            "add_list": "Add to Favorites",
+            "in_list": "In your Favorites",
+            "community_rating": "Elarx Member Score",
+            "release": "Release Date",
+            "duration": "Duration / Playtime",
+            "synopsis": "Description / Synopsis",
+            "reviews_title": "Field Reviews",
+            "publish": "Publish Review",
+            "placeholder": "Write your report here (min. 10 characters)...",
+            "send_review": "Transmit Review",
+            "review_success": "Review successfully archived",
+            "delete_review_confirm": "Are you sure you want to delete this review?",
+            "review_deleted": "Review purged",
+            "no_reviews_yet": "No field reviews available. Be the first."
+      },
+      "catalog": {
+            "explorer_subtitle": "Search through the archives",
+            "title_1": "Global",
+            "title_2": "Registry",
+            "search_placeholder": "Identify target (Name, Director, Studio...)",
+            "type_all": "All Entities",
+            "type_movie": "Movies",
+            "type_series": "Series",
+            "type_games": "Games",
+            "genre_all": "All Genres",
+            "platform_all": "Platforms",
+            "sort_label": "Sort by",
+            "sort_recent": "Recent",
+            "sort_top": "Rating",
+            "results_found": "results found",
+            "no_results": "No records found matching the search."
+      },
+      "admin": {
+            "title": "System Supervision",
+            "management": "Central Management",
+            "system": "Active System",
+            "verifying": "Authenticating Administrator...",
+            "access_denied_title": "Unauthorized Access",
+            "access_denied_sub": "You do not have administrative privileges.",
+            "creation_mode": "Creation Mode",
+            "new_additions": "Latest Deployments",
+            "tabs": {
+                  "dashboard": "Statistics",
+                  "content": "Content",
+                  "users": "Users",
+                  "settings": "Genres / Platforms"
+            },
+            "stats": {
+                  "total_users": "Active Users",
+                  "content_count": "Records in Database",
+                  "active_reviews": "Network Intelligence",
+                  "genres": "Classifications",
+                  "recent_users": "New Identities",
+                  "latest_content": "Latest Content"
+            }
+      },
+      "user_manager": {
+            "header": {
+                  "title": "Central Intelligence",
+                  "subtitle": "Management and supervision of active ELARX units",
+                  "search_placeholder": "Search by identity or email..."
+            },
+            "table": {
+                  "identity": "Operative",
+                  "reputation": "Network Score",
+                  "role": "Access Level",
+                  "status": "Signal Status",
+                  "control": "Operations",
+                  "active": "Active",
+                  "banned": "Neutralized"
+            },
+            "confirm": {
+                  "ban_title": "Neutralize Operative?",
+                  "unban_title": "Restore Operative Access?",
+                  "sub": "Confirming action for: {{name}}"
+            }
+      },
+      "content_manager": {
+            "library": {
+                  "title": "Primary Database",
+                  "filter_placeholder": "Filter records..."
+            },
+            "sections": {
+                  "identity": "Core Data",
+                  "media": "Visual Assets"
+            },
+            "stats": {
+                  "total": "Total Records",
+                  "page": "Page"
+            },
+            "form": {
+                  "title_new": "Deploy New Record",
+                  "title_edit": "Modify Active Record",
+                  "label_description": "Synopsis / Description",
+                  "label_release": "Release Year",
+                  "label_duration": "Execution Time",
+                  "label_format": "Category Format",
+                  "formats": {
+                        "movie": "Movie",
+                        "series": "Series",
+                        "game": "Game"
+                  },
+                  "btn_publish": "Publish Content",
+                  "btn_update": "Confirm Modification"
+            },
+            "confirm_delete_title": "Erase record from network?",
+            "confirm_delete_warning": "This action is permanent and will delete all associated metadata."
+      },
+      "settings": {
+            "common": {
+                  "empty_list": "No records in database",
+                  "error_loading": "Failed to sync configuration data",
+                  "adding": "Writing to database...",
+                  "deleting": "Deleting record...",
+                  "error_duplicate": "Identity already exists on the network",
+                  "error_process": "Operation failed: System rejection",
+                  "error_linked_data": "Cannot delete: Data is linked to active content",
+                  "confirm_delete_title": "Delete Record?",
+                  "confirm_delete_sub": "Permanent deletion of: {{name}}"
+            },
+            "genres": {
+                  "title": "Genre Classifications",
+                  "placeholder": "New classification..."
+            },
+            "platforms": {
+                  "title": "Deployment Platforms",
+                  "placeholder": "New platform..."
+            }
+      },
+      "toasts": {
+            "confirm": {
+                  "title": "Are you sure?",
+                  "subtitle": "This action cannot be undone",
+                  "action_confirm": "Confirm Action",
+                  "action_cancel": "Cancel"
+            },
+            "status": {
+                  "loading": "Processing request...",
+                  "success": "Operation successful",
+                  "error": "An error has occurred"
+            }
+      },
+      "fields": {
+            "title": "Record Title",
+            "banner_image": "Banner Image (Wallpaper)",
+            "cover_image": "Cover Image (Poster)",
+            "genres": "Selected Genres",
+            "platforms": "Available Platforms"
+      },
+      "content": {
+            "common": {
+                  "items": "available titles"
+            }
+      },
+      "notifications": {
+            "loading": "Syncing profile...",
+            "processing": "Processing request...",
+            "updating_role": "Updating access level...",
+            "uploading_image": "Optimizing avatar...",
+            "deleting": "Executing elimination protocol...",
+            "success": {
+                  "logout": "Link closed. See you in the next cycle.",
+                  "profile_updated": "Profile synced successfully",
+                  "avatar_updated": "Visual identity updated",
+                  "review_deleted": "Report purged from history",
+                  "liked": "Elite interaction registered",
+                  "password_changed": "Password updated correctly.",
+                  "save": "Account initialized successfully.",
+                  "reset_email": "Recovery dispatch sent. Check your secure inbox.",
+                  "verified_ready": "Identity verified. You may proceed.",
+                  "banned": "Operative access terminated.",
+                  "unbanned": "Operative access restored.",
+                  "role_updated": "Access level updated successfully.",
+                  "saved": "New record secured in database",
+                  "updated": "Record updated correctly",
+                  "deleted": "Record purged from system"
+            },
+            "error": {
+                  "fetch_failed": "Failed to sync with catalog",
+                  "search_failed": "Search temporarily unavailable",
+                  "fetch": "Failed to connect to profile server",
+                  "required": "Name and username are mandatory",
+                  "profile_failed": "Error updating metadata",
+                  "image_too_large": "Image too heavy (Max 2MB)",
+                  "avatar_failed": "Cloud upload failure",
+                  "generic": "System interference detected. Retry.",
+                  "load_content": "Failed to sync content data.",
+                  "login_required": "Access denied. Login first.",
+                  "review_too_short": "Report is too brief. Be more descriptive.",
+                  "mismatch": "Passwords do not match.",
+                  "invalid_link": "Recovery link expired or invalid.",
+                  "validation": "Security check failure: Invalid data",
+                  "email_not_found": "Identity not found in our records.",
+                  "load_options": "Failed to sync taxonomies",
+                  "server": "Link failure: Database unreachable",
+                  "validation_summary": "Validation summary"
+            },
+            "info": {
+                  "already_verified": "Identity already confirmed on the network.",
+                  "verify_email": "Account locked. Verify your email first."
+            }
+      },
+      "footer": {
+            "rights": "All administrative rights reserved.",
+            "privacy": "Privacy Protocol",
+            "terms": "Access Terms",
+            "cookies": "Digital Footprint",
+            "support": "HQ Technical Support",
+            "tagline": "The Art of High-End Visuals"
+      }
+}
