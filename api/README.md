@@ -7,16 +7,7 @@ Dentro de la carpeta `/final-project-manueljimenez-star`:
 1. **Instalar dependencias de Composer (vía Docker):**
   
     ```bash
-    cd ~/final-project-manueljimenez-star/api
-
-    docker run --rm \
-        -u "$(id -u):$(id -g)" \
-        -v "$(pwd):/var/www/html" \
-        -w /var/www/html \
-        laravelsail/php84-composer:latest \
-        composer install --ignore-platform-reqs
-
-    cp .env.example .env
+    cd ~/final-project-manueljimenez-star
 
         alias sail='api/vendor/bin/sail'
 
