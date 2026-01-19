@@ -6,11 +6,9 @@ const api = axios.create({
       timeout: 15000,
       headers: {
             Accept: "application/json",
-            "Content-Type": "application/json",
       },
 });
 
-// api/axios.js
 api.interceptors.request.use((config) => {
       const token = localStorage.getItem('token');
       if (token) {
@@ -19,11 +17,9 @@ api.interceptors.request.use((config) => {
       return config;
 });
 
-/* REQUEST */
 api.interceptors.response.use(
       (response) => response,
       (error) => {
-            // 1. Error de conexión (Red caída o server apagado)
             if (!error.response) {
                   Toast.error("No connection with server.");
                   return Promise.reject(error);
@@ -31,7 +27,6 @@ api.interceptors.response.use(
 
             const { status, config } = error.response;
 
-            // 2. Manejo centralizado de estados
             switch (status) {
                   case 401:
                         const isProfileRequest = config.url.includes('/profile');
@@ -40,8 +35,6 @@ api.interceptors.response.use(
                         if (!isAuthPath) {
                               localStorage.removeItem("token");
 
-                              // IMPORTANTE: Solo redirigir si NO es la petición de carga de perfil
-                              // Esto evita el bucle infinito en el arranque.
                               if (window.location.pathname !== '/login' && !isProfileRequest) {
                                     Toast.error("Sesión expirada.");
                                     window.location.href = "/login";
@@ -50,9 +43,7 @@ api.interceptors.response.use(
                         break;
 
                   case 422:
-                        // ERROR DE VALIDACIÓN: No mostramos Toast global. 
-                        // Dejamos que el componente (Login/Register) use setErrors() con la respuesta.
-                        break;
+                       break;
 
                   case 403:
                         Toast.error("Access denied. Insufficient permissions.");
@@ -67,8 +58,7 @@ api.interceptors.response.use(
                         break;
 
                   default:
-                        // Si no es un error de validación, mostramos el mensaje que venga del backend
-                        if (status !== 422 && error.response.data?.message) {
+                       if (status !== 422 && error.response.data?.message) {
                               Toast.error(error.response.data.message);
                         } else if (status !== 422) {
                               Toast.error("An unexpected error occurred.");

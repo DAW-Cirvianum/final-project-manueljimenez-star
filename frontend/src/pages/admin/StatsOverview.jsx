@@ -15,6 +15,7 @@ export default function StatsOverview() {
                   setLoading(true);
                   try {
                         const res = await api.get('/admin/stats');
+                        console.log("STATS RESPONSE:", res.data);
                         setStats(res.data);
                   } catch {
                         Toast.error(t('notifications.error.generic'));
@@ -83,7 +84,7 @@ export default function StatsOverview() {
                               </header>
 
                               <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                                    {stats?.latest_content?.slice(0, 3).map(item => (
+                                    {stats?.latest_content?.slice(0, 3)?.map(item => (
                                           <div key={item.id} className="scale-95 hover:scale-100 transition-transform duration-500">
                                                 <ContentCard content={item} />
                                           </div>

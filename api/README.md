@@ -7,7 +7,12 @@ Dentro de la carpeta `/final-project-manueljimenez-star`:
 1. **Instalar dependencias de Composer (vía Docker):**
   
     ```bash
-    cd ~/final-project-manueljimenez-star
+        cd ~/final-project-manueljimenez-star/api
+
+        composer install
+        cp .env.example .env
+        
+        cd ..
 
         alias sail='api/vendor/bin/sail'
 
