@@ -15,7 +15,6 @@ export default function StatsOverview() {
                   setLoading(true);
                   try {
                         const res = await api.get('/admin/stats');
-                        console.log("STATS RESPONSE:", res.data);
                         setStats(res.data);
                   } catch {
                         Toast.error(t('notifications.error.generic'));
